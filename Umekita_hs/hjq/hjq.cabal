@@ -1,0 +1,70 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2f4be1f9d6bd534b724731886a70d8d992158dcc47d201ea0031d116b0868889
+
+name:           hjq
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/sky-y/hjq#readme>
+homepage:       https://github.com/sky-y/hjq#readme
+bug-reports:    https://github.com/sky-y/hjq/issues
+author:         Yuki Fujiwara
+maintainer:     sky.y.0079@gmail.com
+copyright:      2018 Yuki Fujiwara
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/sky-y/hjq
+
+library
+  exposed-modules:
+      Data.Hjq
+      Data.Hjq.Parser
+      Data.Hjq.Query
+  other-modules:
+      Paths_hjq
+  hs-source-dirs:
+      src
+  build-depends:
+      attoparsec
+    , base >=4.7 && <5
+    , text
+  default-language: Haskell2010
+
+executable hjq-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_hjq
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      attoparsec
+    , base >=4.7 && <5
+    , hjq
+    , text
+  default-language: Haskell2010
+
+test-suite hjq-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hjq
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:
+      HUnit
+    , attoparsec
+    , base >=4.7 && <5
+    , hjq
+    , text
+  default-language: Haskell2010

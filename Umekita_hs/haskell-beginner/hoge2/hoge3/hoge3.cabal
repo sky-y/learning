@@ -1,0 +1,62 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 32b443247acb356e0496ae9e0f96c998977b66853064d33fb95dcbfced5395f9
+
+name:           hoge3
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/sky-y/hoge3#readme>
+homepage:       https://github.com/sky-y/hoge3#readme
+bug-reports:    https://github.com/sky-y/hoge3/issues
+author:         Yuki Fujiwara
+maintainer:     sky.y.0079@gmail.com
+copyright:      Copyright: (c) 2018 Yuki Fujiwara
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/sky-y/hoge3
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_hoge3
+  default-language: Haskell2010
+
+executable hoge3-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hoge3
+  other-modules:
+      Paths_hoge3
+  default-language: Haskell2010
+
+test-suite hoge3-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hoge3
+  other-modules:
+      Paths_hoge3
+  default-language: Haskell2010

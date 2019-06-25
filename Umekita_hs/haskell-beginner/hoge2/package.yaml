@@ -1,0 +1,20 @@
+name:                hoge2
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/sky-y/hoge2#readme
+license:             BSD3
+author:              Yuki Fujiwara
+maintainer:          sky.y.0079@gmail.com
+copyright:           Copyright: (c) 2018 Yuki Fujiwara
+category:            Text
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+
+executables:
+  hoge2:
+    source-dirs:      src
+    main:             Main.hs

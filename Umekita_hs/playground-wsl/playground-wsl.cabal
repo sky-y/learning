@@ -1,0 +1,81 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b9891c40e9437b354a1754883ea5080005856c4c0d0691066f5ba6139fefaf9f
+
+name:           playground-wsl
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/sky-y/playground-wsl#readme>
+homepage:       https://github.com/sky-y/playground-wsl#readme
+bug-reports:    https://github.com/sky-y/playground-wsl/issues
+author:         Yuki Fujiwara
+maintainer:     sky.y.0079@gmail.com
+copyright:      Copyright: (c) 2018 Yuki Fujiwara
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/sky-y/playground-wsl
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , mtl
+    , random-shuffle
+    , transformers
+  exposed-modules:
+      ComplexMonadTranslate
+      Game
+      Lib
+      MutableArray
+      OrderedPoints
+      Pow
+      ProcCount
+      SumEnv
+  other-modules:
+      Paths_playground_wsl
+  default-language: Haskell2010
+
+executable playground-wsl-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , mtl
+    , playground-wsl
+    , random-shuffle
+    , transformers
+  other-modules:
+      Paths_playground_wsl
+  default-language: Haskell2010
+
+test-suite playground-wsl-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , mtl
+    , playground-wsl
+    , random-shuffle
+    , transformers
+  other-modules:
+      Paths_playground_wsl
+  default-language: Haskell2010

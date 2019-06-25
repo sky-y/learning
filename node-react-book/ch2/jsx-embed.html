@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- ライブラリの取り込み ───(※1) -->
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const item = "SDカード"
+        const value = 1200
+        const msg = <h1>{item} - {value}</h1>
+        const root = document.getElementById("root")
+        ReactDOM.render(msg, root)
+    </script>
+</body>
+
+</html>

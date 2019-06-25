@@ -1,0 +1,71 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2cd5919d25e43f2b1cda1e6f0c70c644860d25e0c4a179ab17a24da2833319a7
+
+name:           chap71
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/sky-y/chap71#readme>
+homepage:       https://github.com/sky-y/chap71#readme
+bug-reports:    https://github.com/sky-y/chap71/issues
+author:         Yuki Fujiwara
+maintainer:     sky.y.0079@gmail.com
+copyright:      Copyright: (c) 2018 Yuki Fujiwara
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/sky-y/chap71
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_chap71
+  default-language: Haskell2010
+
+executable chap71-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , bytestring
+    , chap71
+    , containers
+  other-modules:
+      Paths_chap71
+  default-language: Haskell2010
+
+test-suite chap71-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , bytestring
+    , chap71
+    , containers
+  other-modules:
+      Paths_chap71
+  default-language: Haskell2010
